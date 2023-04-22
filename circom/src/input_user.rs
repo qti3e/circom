@@ -313,8 +313,9 @@ mod input_processing {
                       || prime_value == "goldilocks"{
                         Ok(String::from(matches.value_of("prime").unwrap()))
                     }
-                    else{
-                        Result::Err(eprintln!("{}", Colour::Red.paint("invalid prime number")))
+                    else {
+                        Ok(String::from(prime_value))
+                        // Result::Err(eprintln!("{}", Colour::Red.paint("invalid prime number")))
                     }
                }
                
